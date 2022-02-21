@@ -1,5 +1,10 @@
 <template>
-  <div class="name">{{greeting(name)}}</div>
+  <div class="name">{{name}}</div>
+  <button 
+  class="btn btn-primary"
+  v-on:click="consoleLog"
+  >
+  Click</button>
 </template>
 
 <script>
@@ -7,13 +12,17 @@ export default {
   setup(){
     const name='Kossie coder'
 
-    const greeting = (name) =>{
-      return 'Hello, '+name;
-    }
+   // const greeting = (name) =>{
+   //   return 'Hello, '+name;
+  //  }
+
+    const consoleLog=()=>{
+      console.log('hello world');
+    };
 
       return{
        name,
-       greeting,
+       consoleLog
        };
   }
 
